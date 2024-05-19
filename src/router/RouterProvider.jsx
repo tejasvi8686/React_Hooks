@@ -3,29 +3,34 @@ import UseState from "../components/UseState/useState";
 import UseEffect from "../components/UseEffect/useEffect";
 import UseRef from "../components/UseRef/useRef";
 import UseMemo from "../components/UseMemo/useMemo";
-import Home from "../components/Home/home"
+import UseCallback from "../components/UseCallback/useCallback";
+import Home from "../components/Home/home";
 
 const provider = createBrowserRouter([
   {
     path: "/",
-    element : <Home />
+    element: <Home />,
   },
   {
     path: "/use-State",
     element: <UseState />,
   },
   {
-    path : "/use-effect",
-    element: <UseEffect />
+    path: "/use-effect",
+    element: <UseEffect />,
   },
   {
-    path : "/use-ref",
-    element : <UseRef />
+    path: "/use-ref",
+    element: <UseRef />,
   },
   {
-    path : '/use-memo',
-    element : <UseMemo/>
-  }
+    path: "/use-memo",
+    element: <UseMemo />,
+  },
+  {
+    path: "/use-callback",
+    element: <UseCallback />,
+  },
 ]);
 
 export default provider;
