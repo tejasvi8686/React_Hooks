@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import UseState from "../components/UseState/useState";
 import UseEffect from "../components/UseEffect/useEffect";
 import UseRef from "../components/UseRef/useRef";
+import UseMemo from "../components/UseMemo/useMemo";
 import Home from "../components/Home/home"
 
 const provider = createBrowserRouter([
@@ -20,6 +21,10 @@ const provider = createBrowserRouter([
   {
     path : "/use-ref",
     element : <UseRef />
+  },
+  {
+    path : '/use-memo',
+    element : <UseMemo/>
   }
 ]);
 
