@@ -5,6 +5,7 @@ import UseRef from "../components/UseRef/useRef";
 import UseMemo from "../components/UseMemo/useMemo";
 import UseCallback from "../components/UseCallback/useCallback";
 import UseReducer from "../components/UseReducer/useReducer";
+import UseLayoutEffect from "../components/UseLayoutEffect/useLayoutEffect";
 import Home from "../components/Home/home";
 
 const provider = createBrowserRouter([
@@ -35,6 +36,10 @@ const provider = createBrowserRouter([
   {
     path: "/use-reducer",
     element: <UseReducer />,
+  },
+  {
+    path: "/use-layout-effect",
+    element: <UseLayoutEffect />,
   },
 ]);
 
