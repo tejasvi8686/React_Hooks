@@ -11,8 +11,11 @@ const useReducers = () => {
       case "decrease": {
         return { count: state.count - 1 };
       }
-      default : {
-        return state
+      case "input": {
+        return { count: action.paylod };
+      }
+      default: {
+        return state;
       }
     }
   };
@@ -23,7 +26,13 @@ const useReducers = () => {
       <h1>{state.count}</h1>
       <button onClick={() => dispatch({ type: "increase" })}>Increase</button>
       <button onClick={() => dispatch({ type: "decrease" })}>Decrease</button>
-
+      <input
+        type="number"
+        value={state.count}
+        onChange={(e) =>
+          dispatch({ type: "input", paylod: Number(e.target.value) })
+        }
+      />
     </div>
   );
 };
